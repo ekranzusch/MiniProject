@@ -20,7 +20,7 @@ kubectl apply -f redis-follower-service.yaml
 kubectl port-forward svc/frontend 8080:80
 ```
 
-### Optional
+### Open the dashboard & verify all services and deployments have started
 ```bash
 minikube dashboard
 ```
