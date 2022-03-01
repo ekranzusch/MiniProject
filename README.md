@@ -27,7 +27,7 @@ minikube dashboard
 
 ### Now you should be able to open http://localhost:8080 and store keys in redis
 
-### CLEANUP
+### Cleanup
 ```bash
 kubectl delete deployment -l app=redis
 kubectl delete service -l app=redis
@@ -36,9 +36,9 @@ kubectl delete service frontend
 ```
 
 ### Useful Links
-[Guestbook demo]: https://kubernetes.io/docs/tutorials/stateless-application/guestbook/
-[Networking service]: https://kubernetes.io/docs/concepts/services-networking/service/
-[Create nodejs app in minikube]: https://theekshanawj.medium.com/kubernetes-deploying-a-nodejs-app-in-minikube-local-development-92df31e0b037
+- [Guestbook demo](https://kubernetes.io/docs/tutorials/stateless-application/guestbook/)
+- [Networking service](https://kubernetes.io/docs/concepts/services-networking/service/)
+- [Create nodejs app in minikube](https://theekshanawj.medium.com/kubernetes-deploying-a-nodejs-app-in-minikube-local-development-92df31e0b037)
 
 <!-- EXTRA INFO
 
