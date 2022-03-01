@@ -1,8 +1,8 @@
 # miniproject
 
-### Clean up and start minikube
+### Start minikube
 ```bash
-minikube start --alsologtostderr
+minikube start
 ```
 
 ### Add deployment and service manifests
@@ -15,7 +15,7 @@ kubectl apply -f redis-follower-deployment.yaml
 kubectl apply -f redis-follower-service.yaml
 ```
 
-### Set up port forward for localhost:8080
+### Set up port forwarding for localhost:8080
 ```bash
 kubectl port-forward svc/frontend 8080:80
 ```
@@ -30,8 +30,16 @@ minikube dashboard
 [Guestbook demo]: https://kubernetes.io/docs/tutorials/stateless-application/guestbook/
 
 ### CLEANUP
+```bash
+kubectl delete deployment -l app=redis
+kubectl delete service -l app=redis
+kubectl delete deployment frontend
+kubectl delete service frontend
+```
 
 <!-- EXTRA INFO
+minikube delete && minikube start --alsologtostderr
+
 kubectl exec -it redis-leader-766465cd9c-vzkwc /bin/bash
 
 kubectl create deployment redis6 --image=redis:6.2.6-bullseye
