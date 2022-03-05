@@ -15,14 +15,14 @@ kubectl apply -f redis-follower-deployment.yaml
 kubectl apply -f redis-follower-service.yaml
 ```
 
-### Set up port forwarding for localhost:8080
-```bash
-kubectl port-forward svc/frontend 8080:80
-```
-
 ### Open the dashboard & verify all services and deployments have started
 ```bash
 minikube dashboard
+```
+
+### Once everything has started, set up port forwarding for localhost:8080
+```bash
+kubectl port-forward svc/frontend 8080:80
 ```
 
 ### Now you should be able to open http://localhost:8080 and store keys in redis
